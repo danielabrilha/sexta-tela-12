@@ -83,15 +83,19 @@ public class tela_2 extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu8);
 
+        jMenu9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
         jMenu9.setText("Produto");
         jMenuBar1.add(jMenu9);
 
+        jMenu10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/venda.png"))); // NOI18N
         jMenu10.setText("Vendas ");
         jMenuBar1.add(jMenu10);
 
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/configuracoes.png"))); // NOI18N
         jMenu3.setText("Configuração");
         jMenuBar1.add(jMenu3);
 
+        jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/sair.png"))); // NOI18N
         jMenu11.setText("Sair");
         jMenu11.add(jSeparator1);
 
