@@ -37,6 +37,7 @@ public class tela_2 extends javax.swing.JFrame {
         jMenu10 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenu11 = new javax.swing.JMenu();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenu1 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -48,16 +49,38 @@ public class tela_2 extends javax.swing.JFrame {
 
         jMenuItem3.setText("jMenuItem3");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jMenu6.setText("Clente ");
+        jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jMenuBar1.setMinimumSize(new java.awt.Dimension(495, 10));
+        jMenuBar1.setPreferredSize(new java.awt.Dimension(495, 40));
+
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente.png"))); // NOI18N
+        jMenu6.setText("Cliente ");
         jMenuBar1.add(jMenu6);
 
-        jMenu7.setText("Funcionario");
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/FUNCIONARIO.png"))); // NOI18N
+        jMenu7.setText("Funcionário");
+        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu7ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu7);
 
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedor.png"))); // NOI18N
         jMenu8.setText("Fornecedor");
+        jMenu8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu8MouseClicked(evt);
+            }
+        });
+        jMenu8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu8ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu8);
 
         jMenu9.setText("Produto");
@@ -70,6 +93,8 @@ public class tela_2 extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         jMenu11.setText("Sair");
+        jMenu11.add(jSeparator1);
+
         jMenuBar1.add(jMenu11);
         jMenuBar1.add(jMenu1);
         jMenuBar1.add(jMenu4);
@@ -91,6 +116,29 @@ public class tela_2 extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+        // TODO add your handling code here:
+        
+       
+        
+    }//GEN-LAST:event_jMenu7ActionPerformed
+
+    private void jMenu8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu8ActionPerformed
+        // TODO add your handling code here:
+        
+         tela_9 form2 = new tela_9(); 
+        form2.setVisible(true); 
+        //dispose(); 
+    }//GEN-LAST:event_jMenu8ActionPerformed
+
+    private void jMenu8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu8MouseClicked
+        // TODO add your handling code here:
+        
+         tela_9 form2 = new tela_9(); 
+        form2.setVisible(true); 
+        //dispose(); 
+    }//GEN-LAST:event_jMenu8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -142,5 +190,6 @@ public class tela_2 extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
