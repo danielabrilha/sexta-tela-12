@@ -3,6 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package telas;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
+
+
+
 
 /**
  *
@@ -118,9 +127,34 @@ public class tela_1 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-         tela_2 form2 = new tela_2(); 
+        /* tela_2 form2 = new tela_2(); 
         form2.setVisible(true); 
-        dispose(); 
+        dispose(); */
+        
+        
+        
+         try ( Connection conexao = 
+                DriverManager.getConnection
+        ("jdbc:mysql://localhost/dbmercadinho", "root", "q1w2e3")) {
+            System.out.println("Conectado!");
+            Statement stmt = (Statement) conexao.createStatement();
+
+            String login = JOptionPane.showInputDialog("Qual o login?");
+            //String login="teste";
+            String senha = JOptionPane.showInputDialog("Qual o senha?");
+
+            String insert;
+            insert = "INSERT INTO usuario (login,senha) VALUES('" + login + "','" + senha + "');";
+            stmt.executeUpdate(insert);
+            JOptionPane.showMessageDialog(null, "Cadastro com Sucesso!!!");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", 1);
+
+        }
+        
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

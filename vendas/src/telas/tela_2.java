@@ -4,6 +4,8 @@
  */
 package telas;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author 12512
@@ -50,7 +52,9 @@ public class tela_2 extends javax.swing.JFrame {
         jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("BAR NHA CHICA");
         setBackground(new java.awt.Color(255, 255, 255));
+        setIconImages(null);
 
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jMenuBar1.setMinimumSize(new java.awt.Dimension(495, 10));
@@ -95,8 +99,13 @@ public class tela_2 extends javax.swing.JFrame {
         jMenu3.setText("Configuração");
         jMenuBar1.add(jMenu3);
 
-        jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/sair.png"))); // NOI18N
+        jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ARANTES.png"))); // NOI18N
         jMenu11.setText("Sair");
+        jMenu11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu11MouseClicked(evt);
+            }
+        });
         jMenu11.add(jSeparator1);
 
         jMenuBar1.add(jMenu11);
@@ -144,6 +153,12 @@ public class tela_2 extends javax.swing.JFrame {
         //dispose(); 
     }//GEN-LAST:event_jMenu8MouseClicked
 
+    private void jMenu11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu11MouseClicked
+        // TODO add your handling code here:
+        
+        dispose();
+    }//GEN-LAST:event_jMenu11MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -153,6 +168,10 @@ public class tela_2 extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
+       // this.setIconImage(new ImageIcon(getClass().getResource("/imagens/arantes.png")).getImage());
+       /// jframe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedor.png"))); 
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -170,7 +189,7 @@ public class tela_2 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(tela_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
