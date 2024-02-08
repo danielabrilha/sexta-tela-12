@@ -135,7 +135,7 @@ public class tela_1 extends javax.swing.JFrame {
         
          try ( Connection conexao = 
                 DriverManager.getConnection
-        ("jdbc:mysql://localhost/dbmercadinho", "root", "q1w2e3")) {
+        ("jdbc:mysql://localhost/sistema_vendas", "root", "q1w2e3")) {
             System.out.println("Conectado!");
             Statement stmt = (Statement) conexao.createStatement();
 
