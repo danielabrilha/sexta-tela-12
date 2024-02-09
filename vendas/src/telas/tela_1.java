@@ -9,6 +9,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 
 
@@ -45,6 +48,7 @@ public class tela_1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setIconImages(getIconImages());
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 255));
 
@@ -161,6 +165,13 @@ public class tela_1 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        //Image icon = Toolkit.getDefaultToolkit().getImage("/imagens/cliente.png");
+        //setIconImage(icon);
+        // Jframe.setIconImage(Toolkit.getDefaultToolkit().getImage("/imagens/cliente.png"));
+
+        
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
