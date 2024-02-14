@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connection;
+package conexao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,12 +17,12 @@ import java.util.logging.Logger;
  *
  * @author Samuelson
  */
-public class ConnectionFactory {
+public class Banco {
 
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/dbmercadinho";
+    private static final String URL = "jdbc:mysql://localhost:3306/sistema_vendas";
     private static final String USER = "root";
-    private static final String PASS = "q1w2e3";
+    private static final String PASS = "";
 
     public static Connection getConnection() {
         try {
@@ -39,7 +39,7 @@ public class ConnectionFactory {
                 con.close();
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Banco.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -54,7 +54,7 @@ public class ConnectionFactory {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Banco.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -69,7 +69,7 @@ public class ConnectionFactory {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Banco.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

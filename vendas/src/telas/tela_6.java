@@ -43,7 +43,7 @@ public class tela_6 extends javax.swing.JFrame {
         trocoField = new javax.swing.JTextField();
         finalizar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
         DINHEIRO.setBackground(new java.awt.Color(255, 255, 255));
@@ -76,33 +76,27 @@ public class tela_6 extends javax.swing.JFrame {
         DINHEIRO.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, -1));
 
         dinheiro.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        dinheiro.setForeground(new java.awt.Color(0, 0, 0));
         dinheiro.setText("DINHEIRO:");
         DINHEIRO.add(dinheiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
         cartao.setBackground(new java.awt.Color(0, 0, 0));
         cartao.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        cartao.setForeground(new java.awt.Color(0, 0, 0));
         cartao.setText("CARTÃO:");
         DINHEIRO.add(cartao, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
 
         cheque.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        cheque.setForeground(new java.awt.Color(0, 0, 0));
         cheque.setText("CHEQUE:");
         DINHEIRO.add(cheque, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
 
         troco.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        troco.setForeground(new java.awt.Color(0, 0, 0));
         troco.setText("TROCO:");
         DINHEIRO.add(troco, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
 
         total.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        total.setForeground(new java.awt.Color(0, 0, 0));
         total.setText("TOTAL:");
         DINHEIRO.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, -1, -1));
 
         obs.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        obs.setForeground(new java.awt.Color(0, 0, 0));
         obs.setText("Obs.:");
         DINHEIRO.add(obs, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 166, -1, -1));
 

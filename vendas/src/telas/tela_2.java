@@ -32,17 +32,18 @@ public class tela_2 extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenu8 = new javax.swing.JMenu();
-        jMenu9 = new javax.swing.JMenu();
-        jMenu10 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu11 = new javax.swing.JMenu();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        cliente = new javax.swing.JMenu();
+        funcionario = new javax.swing.JMenu();
+        produto = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        vendas = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        configuracao = new javax.swing.JMenu();
+        fornecedor = new javax.swing.JMenu();
+        sair = new javax.swing.JMenu();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -60,58 +61,117 @@ public class tela_2 extends javax.swing.JFrame {
         jMenuBar1.setMinimumSize(new java.awt.Dimension(495, 10));
         jMenuBar1.setPreferredSize(new java.awt.Dimension(495, 40));
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente.png"))); // NOI18N
-        jMenu6.setText("Cliente ");
-        jMenuBar1.add(jMenu6);
+        cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente.png"))); // NOI18N
+        cliente.setText("Cliente ");
+        cliente.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                clienteMousePressed(evt);
+            }
+        });
+        jMenuBar1.add(cliente);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/FUNCIONARIO.png"))); // NOI18N
-        jMenu7.setText("Funcionário");
-        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+        funcionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/FUNCIONARIO.png"))); // NOI18N
+        funcionario.setText("Funcionário");
+        funcionario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        funcionario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                funcionarioMousePressed(evt);
+            }
+        });
+        funcionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu7ActionPerformed(evt);
+                funcionarioActionPerformed(evt);
             }
         });
-        jMenuBar1.add(jMenu7);
+        jMenuBar1.add(funcionario);
 
-        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedor.png"))); // NOI18N
-        jMenu8.setText("Fornecedor");
-        jMenu8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu8MouseClicked(evt);
+        produto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
+        produto.setText("Produto");
+        produto.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jMenuItem6.setText("Cadastro");
+        jMenuItem6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem6MousePressed(evt);
             }
         });
-        jMenu8.addActionListener(new java.awt.event.ActionListener() {
+        produto.add(jMenuItem6);
+
+        jMenuItem7.setText("Estoque");
+        jMenuItem7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem7MousePressed(evt);
+            }
+        });
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu8ActionPerformed(evt);
+                jMenuItem7ActionPerformed(evt);
             }
         });
-        jMenuBar1.add(jMenu8);
+        produto.add(jMenuItem7);
 
-        jMenu9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
-        jMenu9.setText("Produto");
-        jMenuBar1.add(jMenu9);
+        jMenuBar1.add(produto);
 
-        jMenu10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/venda.png"))); // NOI18N
-        jMenu10.setText("Vendas ");
-        jMenuBar1.add(jMenu10);
+        vendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/venda.png"))); // NOI18N
+        vendas.setText("Vendas ");
+        vendas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/configuracoes.png"))); // NOI18N
-        jMenu3.setText("Configuração");
-        jMenuBar1.add(jMenu3);
-
-        jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ARANTES.png"))); // NOI18N
-        jMenu11.setText("Sair");
-        jMenu11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu11MouseClicked(evt);
+        jMenuItem2.setText("Histórico");
+        jMenuItem2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem2MousePressed(evt);
             }
         });
-        jMenu11.add(jSeparator1);
+        vendas.add(jMenuItem2);
 
-        jMenuBar1.add(jMenu11);
-        jMenuBar1.add(jMenu1);
-        jMenuBar1.add(jMenu4);
-        jMenuBar1.add(jMenu2);
+        jMenuItem4.setText("Vendas do Dia");
+        jMenuItem4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem4MousePressed(evt);
+            }
+        });
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        vendas.add(jMenuItem4);
+
+        jMenuItem5.setText("Pagamentos");
+        jMenuItem5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem5MousePressed(evt);
+            }
+        });
+        vendas.add(jMenuItem5);
+
+        jMenuBar1.add(vendas);
+
+        configuracao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/configuracoes.png"))); // NOI18N
+        configuracao.setText("Configuração");
+        configuracao.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jMenuBar1.add(configuracao);
+
+        fornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedor.png"))); // NOI18N
+        fornecedor.setText("Fornecedor");
+        fornecedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        fornecedor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                fornecedorMousePressed(evt);
+            }
+        });
+        jMenuBar1.add(fornecedor);
+
+        sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/sair.png"))); // NOI18N
+        sair.setText("Sair");
+        sair.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        sair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                sairMousePressed(evt);
+            }
+        });
+        jMenuBar1.add(sair);
 
         setJMenuBar(jMenuBar1);
 
@@ -130,34 +190,76 @@ public class tela_2 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+    private void funcionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_funcionarioActionPerformed
         // TODO add your handling code here:
         
        
         
-    }//GEN-LAST:event_jMenu7ActionPerformed
+    }//GEN-LAST:event_funcionarioActionPerformed
 
-    private void jMenu8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu8ActionPerformed
+    private void sairMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sairMousePressed
         // TODO add your handling code here:
-        
-         tela_9 form2 = new tela_9(); 
+         tela_1 form2 = new tela_1();          
         form2.setVisible(true); 
-        //dispose(); 
-    }//GEN-LAST:event_jMenu8ActionPerformed
-
-    private void jMenu8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu8MouseClicked
-        // TODO add your handling code here:
-        
-         tela_9 form2 = new tela_9(); 
-        form2.setVisible(true); 
-        //dispose(); 
-    }//GEN-LAST:event_jMenu8MouseClicked
-
-    private void jMenu11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu11MouseClicked
-        // TODO add your handling code here:
-        
         dispose();
-    }//GEN-LAST:event_jMenu11MouseClicked
+    }//GEN-LAST:event_sairMousePressed
+
+    private void funcionarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_funcionarioMousePressed
+        // TODO add your handling code here:
+        
+         tela_8 form2 = new tela_8(); 
+        form2.setVisible(true); 
+    }//GEN-LAST:event_funcionarioMousePressed
+
+    private void fornecedorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fornecedorMousePressed
+        // TODO add your handling code here:
+         tela_9 form2 = new tela_9(); 
+        form2.setVisible(true); 
+    }//GEN-LAST:event_fornecedorMousePressed
+
+    private void jMenuItem2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem2MousePressed
+        // TODO add your handling code here:
+         tela_3 form2 = new tela_3(); 
+        form2.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem2MousePressed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem4MousePressed
+        // TODO add your handling code here:
+         tela_5 form2 = new tela_5(); 
+        form2.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem4MousePressed
+
+    private void jMenuItem5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem5MousePressed
+        // TODO add your handling code here:
+         tela_6 form2 = new tela_6(); 
+        form2.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem5MousePressed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem6MousePressed
+        // TODO add your handling code here:
+        tela_7 form2 = new tela_7(); 
+        form2.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem6MousePressed
+
+    private void jMenuItem7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem7MousePressed
+        // TODO add your handling code here:
+        Tela_10 form2 = new Tela_10(); 
+        form2.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem7MousePressed
+
+    private void clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clienteMousePressed
+        // TODO add your handling code here:
+        tela_11 form2 = new tela_11(); 
+        form2.setVisible(true); 
+    }//GEN-LAST:event_clienteMousePressed
 
     /**
      * @param args the command line arguments
@@ -199,20 +301,21 @@ public class tela_2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu cliente;
+    private javax.swing.JMenu configuracao;
+    private javax.swing.JMenu fornecedor;
+    private javax.swing.JMenu funcionario;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu10;
-    private javax.swing.JMenu jMenu11;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
-    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenu produto;
+    private javax.swing.JMenu sair;
+    private javax.swing.JMenu vendas;
     // End of variables declaration//GEN-END:variables
 }

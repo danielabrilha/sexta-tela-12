@@ -1,6 +1,6 @@
-package model.dao;
+package modelo_query.dao;
 
-import connection.ConnectionFactory;
+import conexao.Banco;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,7 +16,7 @@ public class UsuarioDAO {
 
     public boolean checkLogin(String login, String senha) {
 
-        Connection con = ConnectionFactory.getConnection();
+        Connection con = Banco.getConnection();
         PreparedStatement stmt = null;
         ResultSet rs = null;
 
@@ -30,15 +30,14 @@ public class UsuarioDAO {
 
             rs = stmt.executeQuery();
 
-            if (rs.next()) {
-                
+            if (rs.next()) {                
                 check = true;
             }
 
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            ConnectionFactory.closeConnection(con, stmt, rs);
+            Banco.closeConnection(con, stmt, rs);
         }
 
         return check;

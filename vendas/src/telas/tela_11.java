@@ -8,12 +8,12 @@ package telas;
  *
  * @author 962027
  */
-public class tela_8 extends javax.swing.JFrame {
+public class tela_11 extends javax.swing.JFrame {
 
     /**
      * Creates new form tela_8
      */
-    public tela_8() {
+    public tela_11() {
         initComponents();
     }
 
@@ -85,7 +85,7 @@ public class tela_8 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Cadastro de Funcionários");
+        jLabel1.setText("Cadastro de Cliente");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -354,7 +354,7 @@ public class tela_8 extends javax.swing.JFrame {
             .addGap(0, 380, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Consulta de Funcionários ", jPanel4);
+        jTabbedPane1.addTab("Consulta de Clientes", jPanel4);
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setText("Salvar");
@@ -449,20 +449,21 @@ public class tela_8 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tela_8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tela_11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tela_8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tela_11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tela_8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tela_11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tela_8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tela_11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tela_8().setVisible(true);
+                new tela_11().setVisible(true);
             }
         });
     }
