@@ -15,14 +15,14 @@ import java.util.logging.Logger;
 
 /**
  * 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
- * @author Samuelson
+ * @author 
  */
 public class Banco {
 
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/sistema_vendas";
     private static final String USER = "root";
-    private static final String PASS = "";
+    private static final String PASS = "123qwe";
 
     public static Connection getConnection() {
         try {
