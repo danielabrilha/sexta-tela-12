@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.bean.Produto;
 
 /**
  *
@@ -15,26 +16,36 @@ import java.util.logging.Logger;
  */
 public class totalvendas {
 
-    public boolean checkData(String data) {
+    public int  checkData(String data) {
 
         Connection con = Banco.getConnection();
         PreparedStatement stmt = null;
         ResultSet rs = null;
 
-        boolean check = false;
+      int check = 0;
 
         try {
 
-            stmt = con.prepareStatement("SELECT  valor FROM vendas WHERE data = ? ");
+            stmt = con.prepareStatement("SELECT sum (valor) as total FROM vendas WHERE data = ? ");
             stmt.setString(1, data);
           //  stmt.setString(2, senha);
 
             rs = stmt.executeQuery();
 
            if (rs.next()) {                
-                check = true;
+             //   check = 1;
+                 check = rs.getInt("total");
+            
             }
 
+           /* while (rs.next()) {
+   check = rs.getInt("valor");/*
+                
+               // Produto produto = new Produto();
+
+               
+               
+            }
         /* 
         while (rs.next()) {
              produto produto = new produto ();

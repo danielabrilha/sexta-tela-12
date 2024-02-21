@@ -151,8 +151,8 @@ public class tela_5 extends javax.swing.JFrame {
        
        
           totalvendas dao = new  totalvendas ();
-          boolean mensagem = dao.checkData(c1.getText());
-       if(dao.checkData(c1.getText())){
+          int mensagem = dao.checkData(c1.getText());
+          if(mensagem ==1){
           c2.setText("="+mensagem);
            
        }else{
